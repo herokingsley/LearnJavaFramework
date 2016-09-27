@@ -89,7 +89,33 @@ public final class PropsUtil {
     public static int getInt(Properties props, String key, int defaultValue){
         int value = defaultValue;
         if(props.containsKey(key)) {
-            v
+            value = CastUtil.castInt(props.getProperty(key));
         }
+        return value;
+    }
+
+    /**
+     * 获取布尔型属性（默认值为false）
+     * @param props
+     * @param key
+     * @return
+     */
+    public static boolean getBoolean(Properties props, String key){
+        return getBoolean(props, key, false);
+    }
+
+    /**
+     * 获取布尔型属性（可指定默认值）
+     * @param props
+     * @param key
+     * @param defaultValue
+     * @return
+     */
+    public static boolean getBoolean(Properties props, String key, Boolean defaultValue){
+        boolean value = defaultValue;
+        if(props.containsKey(key)){
+            value = CastUtil.castBoolean(props.getProperty(key));
+        }
+        return value;
     }
 }
