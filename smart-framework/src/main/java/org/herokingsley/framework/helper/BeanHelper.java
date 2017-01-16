@@ -1,10 +1,10 @@
 package org.herokingsley.framework.helper;
 
-import org.herokingsley.framework.util.ReflectionUtil;
+        import org.herokingsley.framework.util.ReflectionUtil;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+        import java.util.HashMap;
+        import java.util.Map;
+        import java.util.Set;
 
 /**
  * Bean助手类
@@ -41,10 +41,19 @@ public final class BeanHelper {
      * @return
      */
     public static <T> T getBean(Class<T> cls){
-         if(!BEAN_MAP.containsKey(cls)){
-             throw new RuntimeException("can not get bean by class: " + cls);
-         }
-         return (T)BEAN_MAP.get(cls);
+        if(!BEAN_MAP.containsKey(cls)){
+            throw new RuntimeException("can not get bean by class: " + cls);
+        }
+        return (T)BEAN_MAP.get(cls);
+    }
+
+    /**
+     * 设置Bean实例
+     * @param cls
+     * @param obj
+     */
+    public static void setBean(Class<?> cls, Object obj){
+        BEAN_MAP.put(cls, obj);
     }
 
 
