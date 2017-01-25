@@ -1,9 +1,6 @@
 package org.herokingsley.framework;
 
-import org.herokingsley.framework.helper.BeanHelper;
-import org.herokingsley.framework.helper.ClassHelper;
-import org.herokingsley.framework.helper.ControllerHelper;
-import org.herokingsley.framework.helper.IocHelper;
+import org.herokingsley.framework.helper.*;
 import org.herokingsley.framework.util.ClassUtil;
 
 /**
@@ -17,6 +14,7 @@ public final class HelperLoader {
         Class<?>[] classList = {
                 ClassHelper.class,
                 BeanHelper.class,
+                AopHelper.class,
                 IocHelper.class,
                 ControllerHelper.class
         };

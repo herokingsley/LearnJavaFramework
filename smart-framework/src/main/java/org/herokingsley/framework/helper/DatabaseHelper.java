@@ -1,12 +1,13 @@
-package org.herokingsley.chapter2.helper;
+package org.herokingsley.framework.helper;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.MapListHandler;
-import org.herokingsley.chapter2.util.CollectionUtil;
-import org.herokingsley.chapter2.util.PropsUtil;
+
+import org.herokingsley.framework.util.CollectionUtil;
+import org.herokingsley.framework.util.PropsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

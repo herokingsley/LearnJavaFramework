@@ -1,6 +1,8 @@
 package org.herokingsley.framework.proxy;
 
 import com.sun.org.apache.bcel.internal.generic.LOOKUPSWITCH;
+import org.herokingsley.framework.annotation.Aspect;
+import org.herokingsley.framework.annotation.Controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,7 @@ import java.lang.reflect.Method;
  * @author Administrator
  * @date 2016/12/24
  */
+@Aspect(Controller.class)
 public class ControllerAspect extends AspectProxy{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ControllerAspect.class);
